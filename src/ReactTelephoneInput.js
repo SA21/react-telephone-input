@@ -81,6 +81,7 @@ function isNumberValid(inputNumber) {
         onlyCountries: React.PropTypes.arrayOf(React.PropTypes.object),
         preferredCountries: React.PropTypes.arrayOf(React.PropTypes.string),
         classNames: React.PropTypes.string,
+	id: React.PropTypes.string,
         onChange: React.PropTypes.func,
         onEnterKeyPress: React.PropTypes.func,
         onBlur: React.PropTypes.func,
@@ -560,6 +561,7 @@ console.log('probableCandidateIndex', probableCandidateIndex)
                     value={this.state.formattedNumber}
                     ref="numberInput"
                     type="tel"
+                    id={this.props.id}
                     className={inputClasses}
                     autoComplete='tel'
                     pattern={this.props.pattern}
